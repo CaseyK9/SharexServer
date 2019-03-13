@@ -175,7 +175,7 @@ class Player(Thread):
             print("Got requestplayerinfo request from ", request['DEVICE_ID'])
             conn = sqlite3.connect('sharex.db')
             c = conn.cursor()
-            t = (request['DEVICE_ID'])
+            t = (request['DEVICE_ID'],)
             c.execute("SELECT id FROM users WHERE devid=?", t)
             print("fetchone is: ", c.fetchone())
             if len(c.fetchone()) > 0:
