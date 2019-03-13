@@ -167,8 +167,9 @@ class Player(Thread):
     def process_request(self, request):
         if not 'TYPE' in request: return
 
-        if request['TYPE'] == "PLAYER_INFO":
-            self._player_name = request['NAME']
+        if request['TYPE'] == "REQUEST_PLAYER_INFO":
+            self._player_name = request['DEVICE_ID']
+            self.send_data("VirtualNumber")
             return
 
         if request['TYPE'] == "ECHO":
@@ -192,8 +193,4 @@ class Player(Thread):
 
         if request['TYPE'] == "ROOMS_ACTIVITY_INFO":
             self.send_data(database.get_rooms_active_players_info())
-            return
-
-        if request['TYPE'] == "MY_OWN_TEST"
-            self.send_data("test from server")
             return
