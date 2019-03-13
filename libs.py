@@ -169,6 +169,7 @@ class Player(Thread):
 
         if request['TYPE'] == "REQUEST_PLAYER_INFO":
             self._player_name = request['DEVICE_ID']
+            print("Got requestplayerinfo request from ", request['DEVICE_ID'])
             self.send_data("VirtualNumber")
             return
 
