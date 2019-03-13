@@ -13,8 +13,6 @@ rooms_min_bet = config_file['rooms_min_bet']
 rooms_max_bet = config_file['rooms_max_bet']
 rooms_active_players = [0] * len(config_file['rooms_name'])
 
-conn = sqlite3.connect('sharex.db')
-c = conn.cursor()
 
 def get_rooms_full_info():
     return {

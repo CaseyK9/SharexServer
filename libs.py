@@ -1,9 +1,8 @@
 from socket import timeout
 from threading import Thread
+import sqlite3
 
 import time, json, database
-
-c = database.conn.cursor()
 
 class Matcher:
     def __init__(self,):
@@ -73,6 +72,7 @@ class Room(Thread):
 
 class Player(Thread):
     PLAYER_ID = -1
+    
     def __init__(self, socket, matcher):
         Thread.__init__(self)
 
@@ -88,6 +88,9 @@ class Player(Thread):
 
         self._player_name   = None
         self._player_id     = None
+
+        self.conn = sqlite3.connect('sharex.db')
+        self.c = self.conn.cursor()
 
 
     @property
@@ -173,13 +176,13 @@ class Player(Thread):
         if request['TYPE'] == "REQUEST_PLAYER_INFO":
             self._player_name = request['DEVICE_ID']
             print("Got requestplayerinfo request from ", request['DEVICE_ID'])
-            c.execute("SELECT PlayerID FROM users WHERE devid=?", request['DEVICE_ID'])
-            if len(c.fetchone()) > 0:
+            self.c.execute("SELECT PlayerID FROM users WHERE devid=?", request['DEVICE_ID'])
+            if len(self.c.fetchone()) > 0:
                 print("Found user!")
-                print("Fetched player ID by DevID." , c.fetchone())
+                print("Fetched player ID by DevID." , self.c.fetchone())
             else:
                 print("Not found. adding user" , request['DEVICE_ID'] , "to database")
-                c.execute("INSERT INTO users VALUES ('')")
+                self.c.execute("INSERT INTO users VALUES ('')")
             self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": "DummyPlayerID"})
             return
 
