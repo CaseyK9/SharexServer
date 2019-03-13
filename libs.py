@@ -181,7 +181,8 @@ class Player(Thread):
                 print("Fetched player ID by DevID." , c.fetchone())
             else:
                 print("Not found. adding user" , request['DEVICE_ID'] , "to database")
-                c.execute("INSERT INTO users VALUES (?, ?, ?)", self.PLAYER_ID, request['DEVICE_ID'], "dummyName")
+                user = [(self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME")]
+                c.executemany("INSERT INTO users VALUES (?,?,?)", user)
             self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": "DummyPlayerID"})
             return
 
