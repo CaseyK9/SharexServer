@@ -170,7 +170,7 @@ class Player(Thread):
         if request['TYPE'] == "REQUEST_PLAYER_INFO":
             self._player_name = request['DEVICE_ID']
             print("Got requestplayerinfo request from ", request['DEVICE_ID'])
-            self.send_data({"TYPE": "PLAYER_INFO", "MSG": "VirtualNumber"})
+            self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": "DummyPlayerID"})
             return
 
         if request['TYPE'] == "ECHO":
