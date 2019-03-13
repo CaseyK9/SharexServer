@@ -178,14 +178,17 @@ class Player(Thread):
             t = (request['DEVICE_ID'],)
             c.execute("SELECT id FROM users WHERE devid=?", t)
             print("fetchone is: ", c.fetchone())
-            if len(c.fetchone()) > 0:
-                print("Found user!")
-                print("Fetched player ID by DevID." , c.fetchone())
-            else:
+
+            if c.fetchone() is None:
                 print("Not found. adding user" , request['DEVICE_ID'] , "to database")
                 user = [(self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME")]
                 c.executemany("INSERT INTO users VALUES (?,?,?)", user)
-            self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": "DummyPlayerID"})
+                
+            else:
+                print("Found user!")
+                print("Fetched player ID by DevID." , c.fetchone())
+
+            self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": c.fetchone()})
             return
 
         if request['TYPE'] == "ECHO":
