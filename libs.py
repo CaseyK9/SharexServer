@@ -175,13 +175,13 @@ class Player(Thread):
             print("Got requestplayerinfo request from ", request['DEVICE_ID'])
             conn = sqlite3.connect('sharex.db')
             c = conn.cursor()
-            c.execute("SELECT PlayerID FROM users WHERE devid=?", request['DEVICE_ID'])
+            c.execute("SELECT id FROM users WHERE devid=?", request['DEVICE_ID'])
             if len(c.fetchone()) > 0:
                 print("Found user!")
                 print("Fetched player ID by DevID." , c.fetchone())
             else:
                 print("Not found. adding user" , request['DEVICE_ID'] , "to database")
-                c.execute("INSERT INTO users VALUES ('')")
+                c.execute("INSERT INTO users VALUES (?, ?, ?)", self.PLAYER_ID, request['DEVICE_ID'], "dummyName")
             self.send_data({"TYPE": "PLAYER_INFO", "PlayerID": "DummyPlayerID"})
             return
 
