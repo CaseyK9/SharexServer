@@ -181,6 +181,13 @@ class Player(Thread):
 
             if c.fetchone() is None:
                 print("Not found. adding user" , request['DEVICE_ID'] , "to database")
+
+                c.execute("SELECT * FROM users")
+                rows = c.fetchall()
+
+                for row in rows:
+                    print("row is: ", row)
+
                 user = [(self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME")]
                 c.executemany("INSERT INTO users VALUES (?,?,?)", user)
                 
