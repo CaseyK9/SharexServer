@@ -193,3 +193,7 @@ class Player(Thread):
         if request['TYPE'] == "ROOMS_ACTIVITY_INFO":
             self.send_data(database.get_rooms_active_players_info())
             return
+
+        if request['TYPE'] == "MY_OWN_TEST"
+            self.send_data("test from server")
+            return
