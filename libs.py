@@ -1,5 +1,6 @@
 from socket import timeout
 from threading import Thread
+
 import time, json, database
 
 
@@ -57,6 +58,7 @@ class Room(Thread):
             player._joined_room = self
             database.rooms_active_players[database.rooms_name.index(self.name)] += 1
             player.send_data({"TYPE":"ROOM_JOIN_SUCCESS", "ROOM_NAME":str(self.name)})
+            
         else:
             player.send_data({"TYPE":"ROOM_JOIN_FAILD", "ERROR_MSG":"Room is at full capacity."})
 
