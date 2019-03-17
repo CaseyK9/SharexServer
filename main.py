@@ -1,7 +1,8 @@
 from libs import Player, Room, Matcher
 import database, socket, json
 
-HOSTNAME, PORT = "0.0.0.0", 4466
+#HOSTNAME, PORT = "0.0.0.0", 4466
+HOSTNAME, PORT = "localhost", 80
 
 if __name__ == '__main__':
     """ ################ Setting up the socket ################ """
