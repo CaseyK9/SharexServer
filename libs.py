@@ -400,7 +400,7 @@ class Player(Thread):
                 # Get commenter points
                 t = [commenterId]
                 c.execute("SELECT points FROM users WHERE id = ?", t)
-                commenterPoints = c.fetchone()[0]
+                commenterPoints = int(c.fetchone()[0])
                 # Get post points
                 t = request['POST_ID']
                 c.execute("SELECT points FROM posts WHERE postid=?", t)
@@ -426,7 +426,7 @@ class Player(Thread):
                 # Get commenter points
                 t = [commenterId]
                 c.execute("SELECT points FROM users WHERE id = ?", t)
-                commenterPoints = c.fetchone()[0]
+                commenterPoints = int(c.fetchone()[0])
                 # Get post points
                 t = request['POST_ID']
                 c.execute("SELECT points FROM posts WHERE postid=?", t)
