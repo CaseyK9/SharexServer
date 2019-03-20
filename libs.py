@@ -1,8 +1,8 @@
 from socket import timeout
 from threading import Thread
 import sqlite3
-import datetime
 import time, json, database
+from datetime import datetime, timedelta
 
 class Matcher:
     def __init__(self,):
@@ -28,52 +28,12 @@ class Room(Thread):
         self.capacity       = capacity
 
 
-    def run(self,):
-        while True:
-            time.sleep(1)
-            if len(self._players) == 0:
-                continue
-            else:
-                database.rooms_active_players[database.rooms_name.index(self.name)] = len(self._players)
-
-            for player in self._players:
-                player.send_data({"TYPE":"ROOM_CLOCK", "CLOCK":self.clock})
-
-
-    @property
-    def clock(self):
-        self._counter = self._counter + 1
-        return str(self._counter % 14)
-
-
-    def broadcast_event(self, sender, json_frame):
-        for player in self._players:
-            if not sender == player:
-                player.send_data(json_frame)
-
-
-    def add_player(self, player):
-        if len(self._players) < self.capacity and player not in self._players:
-            self._players.append(player)
-            player._joined_room = self
-            database.rooms_active_players[database.rooms_name.index(self.name)] += 1
-            player.send_data({"TYPE":"ROOM_JOIN_SUCCESS", "ROOM_NAME":str(self.name)})
-            
-        else:
-            player.send_data({"TYPE":"ROOM_JOIN_FAILD", "ERROR_MSG":"Room is at full capacity."})
-
-
-
-    def remove_player(self, player):
-        self._players.remove(player)
-        self.broadcast_event(player, {"TYPE":"ROOM_PLAYER_LEFT"} + player.player_info)
-
 
 
 class Player(Thread):
     PLAYER_ID = -1
     
-    def __init__(self, socket, matcher):
+    def __init__(self, socket):
         Thread.__init__(self)
 
         Player.PLAYER_ID   += 1
@@ -82,7 +42,6 @@ class Player(Thread):
         socket.settimeout(5)
 
         self._server_id     = Player.PLAYER_ID
-        self._matcher       = matcher
         self._socket        = socket
         self.request_queue  = []
 
@@ -118,9 +77,6 @@ class Player(Thread):
 
     def on_client_disconnect(self,):
         print("CLIENT ID:%s HAS DISCONNECTED" % (self._server_id))
-        if self._joined_room is not None:
-            del self._joined_room._players[self._joined_room._players.index(self)]
-            database.rooms_active_players[database.rooms_name.index(self._joined_room.name)] = len(self._joined_room._players)
         quit()
 
 
@@ -186,7 +142,7 @@ class Player(Thread):
 
                 c.execute("SELECT * FROM users")
 
-                user = [self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME", "0", "1", "0", "0", "0", "0"]
+                user = [self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME", "100", "1", "0", "0", "0", "0"]
 
                 print("about to add this: " , user)
 
@@ -255,6 +211,43 @@ class Player(Thread):
                         likedByCurrentUser = "NO"
                 else:
                         likedByCurrentUser = "NO"
+
+                for key, value in request.items():
+                    print ("Key is: ", key, ", Value is: ", value)
+                #Check if post has filters and apply them
+
+                #MY_QUESTIONS filter
+
+                MyQuestionsCheck = request["MY_QUESTION"]
+                if MyQuestionsCheck == "YES":
+                    t = [str(post[0])]
+                    c.execute("SELECT posterid FROM posts WHERE postid=?", t)
+                    posterid = c.fetchone()[0]
+                    print("Going to compare posterid ", posterid, " with PLAYER_ID ", request['PLAYER_ID'])
+                    if request['PLAYER_ID'] != posterid:
+                        continue
+
+
+                #GENRE filter
+
+                QuestionGenre = request["QUESTIONS_GENRE"]
+                if QuestionGenre != "NONE":
+                    t = [str(post[0])]
+                    c.execute("SELECT genre FROM posts WHERE postid=?", t)
+                    genre = c.fetchone()[0]
+                    print("Going to compare QuestionGenre ", QuestionGenre, " with genre ", genre)
+                    if QuestionGenre != genre:
+                        continue
+
+                #Check whether question expired
+                t = [str(post[0])]
+                c.execute("SELECT date FROM posts WHERE postid=?", t)
+                postdate = datetime.strptime(c.fetchone()[0], '%Y-%m-%d %H:%M:%S.%f') + timedelta(weeks=1)
+                print("About to compare ", datetime.now(), ", With ", postdate)
+                if postdate < datetime.now():
+                    continue
+
+
                 self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser})
 
             conn.close()
@@ -268,9 +261,27 @@ class Player(Thread):
             conn.commit()
             postsCount = c.fetchone()
 
-            t = [str(postsCount[0]), request["PLAYER_ID"], datetime.datetime.now(), str(request["POST_POINTS"]), request["POST_CONTENT"]]
+            t = [str(postsCount[0]), request["PLAYER_ID"], datetime.now(), str(request["POST_POINTS"]), request["POST_CONTENT"], request["POST_GENRE"]]
 
-            c.execute("insert into posts values(?,?,?,?,?)", (t[0], t[1], t[2], t[3], t[4]))
+            c.execute("insert into posts values(?,?,?,?,?,?)", (t[0], t[1], t[2], t[3], t[4], t[5]))
+            conn.commit()
+
+            # Get poster points
+            t = request["PLAYER_ID"]
+            c.execute("SELECT points FROM users WHERE id = ?", t)
+            posterPoints = float(c.fetchone()[0])
+            # Get post points
+            postPoints = request["POST_POINTS"]
+            print("Trying to convert ", postPoints, " into an int like : ", int(postPoints))
+            posterPoints += float(postPoints)/2
+            # Add points to poster
+            t = [posterPoints, request["PLAYER_ID"]]
+            c.execute("UPDATE users SET points=? WHERE id=?", (t[0], t[1]))
+            conn.commit()
+            newLevel = calcLevel(posterPoints)
+            t = [str(newLevel)]
+            print("new level should be ", t)
+            c.execute("UPDATE users SET level=?", t)
             conn.commit()
 
             self.send_data({"TYPE": "POST_ADDED"})
@@ -286,10 +297,31 @@ class Player(Thread):
             conn.commit()
             commentsCount = c.fetchone()
 
-            t = [str(commentsCount[0]), request["PLAYER_ID"], str(request["CONTENT"]), request["POST_ID"], datetime.datetime.now()]
+            t = [str(commentsCount[0]), request["PLAYER_ID"], str(request["CONTENT"]), request["POST_ID"], datetime.now()]
             
 
             c.execute("insert into comments values(?,?,?,?,?)", (t[0], t[1], t[2], t[3], t[4]))
+            conn.commit()
+
+            # Get commenter points
+            t = request["PLAYER_ID"]
+            c.execute("SELECT points FROM users WHERE id = ?", t)
+            commenterPoints = float(c.fetchone()[0])
+            # Get comment points
+            t = [commentsCount[0]]
+            c.execute("SELECT postid from comments WHERE id = ?", t)
+            postid = c.fetchone()[0]
+            t = [postid]
+            c.execute("SELECT points from posts WHERE postid = ?", t)
+            commentPoints = c.fetchone()[0]
+            commenterPoints += float(commentPoints)/2
+            # Add points to commenter
+            t = [commenterPoints, request["PLAYER_ID"]]
+            c.execute("UPDATE users SET points=? WHERE id=?", (t[0], t[1]))
+            conn.commit()
+            newLevel = calcLevel(commenterPoints)
+            t = [str(newLevel)]
+            c.execute("UPDATE users SET level=?", t)
             conn.commit()
 
             self.send_data({"TYPE": "COMMENT_ADDED"})
@@ -363,22 +395,53 @@ class Player(Thread):
             if request['USER_EVALUATION'] == 'HELPFUL':
                 # Get commenter ID
                 t = [request['COMMENT_ID'], request['POST_ID']]
-                c.execute("SELECT userid FROM comments WHERE commendid=? AND postid =?", (t[0], t[1]))
+                c.execute("SELECT userid FROM comments WHERE id=? AND postid =?", (t[0], t[1]))
                 commenterId = c.fetchone()[0]
                 # Get commenter points
                 t = request[commenterId]
-                c.execute("SELECT points FROM users WHERE userid = ?", t)
+                c.execute("SELECT points FROM users WHERE id = ?", t)
                 commenterPoints = c.fetchone()[0]
                 # Get post points
                 t = request['POST_ID']
                 c.execute("SELECT points FROM posts WHERE postid=?", t)
                 postPoints = c.fetchone()[0]
-                pointsToAdd = postPoints / 10
+                pointsToAdd = postPoints
                 commenterPoints += pointsToAdd
                 # Add new points to commenter
                 t = [commenterPoints, commenterId]
-                c.execute("UPDATE users SET points=? WHERE userid=?", (t[0], t[1]))
+                c.execute("UPDATE users SET points=? AND level=? WHERE id=?", (t[0], t[1], t[2]))
                 conn.commit()
+                newLevel = calcLevel(commenterPoints)
+                t = [str(newLevel)]
+                c.execute("UPDATE users SET level=?", t)
+                conn.commit()
+                
+
+            # Deduce points from comment owner if this user evaluated him as Not Helpful
+            elif request['USER_EVALUATION'] == 'NOT_HELPFUL':
+                # Get commenter ID
+                t = [request['COMMENT_ID'], request['POST_ID']]
+                c.execute("SELECT userid FROM comments WHERE id=? AND postid =?", (t[0], t[1]))
+                commenterId = c.fetchone()[0]
+                # Get commenter points
+                t = request[commenterId]
+                c.execute("SELECT points FROM users WHERE id = ?", t)
+                commenterPoints = c.fetchone()[0]
+                # Get post points
+                t = request['POST_ID']
+                c.execute("SELECT points FROM posts WHERE postid=?", t)
+                postPoints = c.fetchone()[0]
+                pointsToAdd = postPoints
+                commenterPoints -= pointsToAdd
+                if commenterPoints > 0:
+                    # Deduce points from commenter
+                    t = [commenterPoints, commenterId]
+                    c.execute("UPDATE users SET points=? WHERE id=?", (t[0], t[1]))
+                    conn.commit()
+                    newLevel = calcLevel(commenterPoints)
+                    t = [str(newLevel)]
+                    c.execute("UPDATE users SET level=?", t)
+                    conn.commit()
 
             return
 
@@ -486,3 +549,14 @@ class Player(Thread):
             conn.close()
 
             return
+    
+def calcLevel(points):
+    if float(points) < 120:
+        return 1
+    elif float(points) > 120 and float(points) < 150:
+        return 2
+    elif float(points) > 150:
+        tempItem = float(points)
+        tempItem-= 150
+        level = 2 + (tempItem / 100)
+        return int(level)
