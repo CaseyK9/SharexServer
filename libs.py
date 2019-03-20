@@ -140,9 +140,11 @@ class Player(Thread):
             if len(tempResult) == 0:
                 print("User Not found in database. adding user" , request['DEVICE_ID'] , "to database")
 
-                c.execute("SELECT * FROM users")
+                c.execute("SELECT COUNT(*) FROM users")
 
-                user = [self.PLAYER_ID, request['DEVICE_ID'], "DUMMYNAME", "100", "1", "0", "0", "0", "0"]
+                usersCount = int(c.fetchone()[0])
+
+                user = [usersCount, request['DEVICE_ID'], "DUMMYNAME", "100", "1", "0", "0", "0", "0"]
 
                 print("about to add this: " , user)
 
