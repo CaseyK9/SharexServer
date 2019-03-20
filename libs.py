@@ -255,8 +255,10 @@ class Player(Thread):
             return
 
         if request['TYPE'] == "SEND_POST_REQUEST":
+            print("Got SEND_POST_REQUEST. About to connect to database file.")
             conn = sqlite3.connect('sharex.db')
             c = conn.cursor()
+            print("Connected to database file.")
             c.execute("SELECT COUNT(*) FROM posts")
             conn.commit()
             postsCount = c.fetchone()
