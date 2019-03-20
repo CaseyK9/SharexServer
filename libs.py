@@ -409,7 +409,7 @@ class Player(Thread):
                 commenterPoints += pointsToAdd
                 # Add new points to commenter
                 t = [commenterPoints, commenterId]
-                c.execute("UPDATE users SET points=? AND level=? WHERE id=?", (t[0], t[1], t[2]))
+                c.execute("UPDATE users SET points=? WHERE id=?", (t[0], t[1]))
                 conn.commit()
                 newLevel = calcLevel(commenterPoints)
                 t = [str(newLevel)]
