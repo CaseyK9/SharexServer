@@ -382,13 +382,11 @@ class Player(Thread):
 
                 c.execute("INSERT INTO evaluations VALUES (?,?,?, ?)", (t[0], t[1], t[2], t[3]))
                 conn.commit()
-                conn.close()
 
             else:
 
                 c.execute("UPDATE evaluations SET evaluation=? WHERE commentid=? AND userid=? AND postid=?", (t[3], t[0], t[1], t[2]))
                 conn.commit()
-                conn.close()
 
             self.send_data({"TYPE": "EVALUATION_ADDED"})
 
@@ -444,6 +442,8 @@ class Player(Thread):
                     t = [str(newLevel)]
                     c.execute("UPDATE users SET level=?", t)
                     conn.commit()
+
+            conn.close()
 
             return
 
