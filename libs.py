@@ -246,7 +246,7 @@ class Player(Thread):
                 
                 t = [str(post[0])]
                 c.execute("SELECT date FROM posts WHERE postid=?", t)
-                postdate = datetime.strptime(c.fetchone()[0], '%Y-%m-%d %H:%M:%S.%f') + timedelta(seconds=10)
+                postdate = datetime.strptime(c.fetchone()[0], '%Y-%m-%d %H:%M:%S.%f') + timedelta(weeks=1)
                 print("About to compare ", datetime.now(), ", With ", postdate)
                 if postdate < datetime.now():
                     expiredState = "YES"
