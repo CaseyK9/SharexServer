@@ -242,11 +242,17 @@ class Player(Thread):
                         continue
 
                 #Check whether question expired
+                expiredState = "NO"
+                
                 t = [str(post[0])]
                 c.execute("SELECT date FROM posts WHERE postid=?", t)
-                postdate = datetime.strptime(c.fetchone()[0], '%Y-%m-%d %H:%M:%S.%f') + timedelta(weeks=1)
+                postdate = datetime.strptime(c.fetchone()[0], '%Y-%m-%d %H:%M:%S.%f') + timedelta(seconds=10)
                 print("About to compare ", datetime.now(), ", With ", postdate)
                 if postdate < datetime.now():
+                    expiredState = "YES"
+                    print("This question is expired! but MyQuestionsCheck is ", MyQuestionsCheck)
+                    if MyQuestionsCheck == "YES":
+                        self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser, "EXPIRED": expiredState})
                     continue
 
 
@@ -290,6 +296,18 @@ class Player(Thread):
 
             self.send_data({"TYPE": "POST_ADDED"})
 
+            # Increase questionsCount for user
+
+            # Get poster questions count
+            t = request["PLAYER_ID"]
+            c.execute("SELECT questionsCount FROM users WHERE id = ?", t)
+            posterPoints = int(c.fetchone()[0])
+            posterPoints += 1
+            # Add points to poster
+            t = [posterPoints, request["PLAYER_ID"]]
+            c.execute("UPDATE users SET questionsCount=? WHERE id=?", (t[0], t[1]))
+            conn.commit()
+
             conn.close()
 
             return
@@ -329,6 +347,14 @@ class Player(Thread):
             conn.commit()
 
             self.send_data({"TYPE": "COMMENT_ADDED"})
+
+            # Update user comments count
+            t = request["PLAYER_ID"]
+            c.execute("SELECT COUNT(*) FROM comments WHERE userid = ?", t)
+            commentsCount = c.fetchone()[0]
+            t = [commentsCount, request["PLAYER_ID"]]
+            c.execute("UPDATE users SET answersCount=? WHERE id = ?", (t[0], t[1]))
+            conn.commit()
 
             conn.close()
 
@@ -389,6 +415,13 @@ class Player(Thread):
 
                 c.execute("UPDATE evaluations SET evaluation=? WHERE commentid=? AND userid=? AND postid=?", (t[3], t[0], t[1], t[2]))
                 conn.commit()
+                # Update evaluationsCount of evaluator
+                t=[request['PLAYER_ID']]
+                c.execute("SELECT COUNT(*) from EVALUATIONS where userid=?")
+                newCount = c.fetchone()[0]
+                t = [newCount, request["PLAYER_ID"]]
+                c.execute("UPDATE users SET evaluationsCount = ? WHERE id = ?", (t[0], t[1]))
+                conn.commit()
 
             self.send_data({"TYPE": "EVALUATION_ADDED"})
 
@@ -417,6 +450,21 @@ class Player(Thread):
                 t = [str(newLevel)]
                 c.execute("UPDATE users SET level=?", t)
                 conn.commit()
+
+                # Increase helpfulCount of commenter
+                # Get commenter ID
+                t = [request['COMMENT_ID'], request['POST_ID']]
+                c.execute("SELECT userid FROM comments WHERE id=? AND postid =?", (t[0], t[1]))
+                commenterId = c.fetchone()[0]
+                # Get commenter helpfulCount
+                t = [commenterId]
+                c.execute("SELECT helpfulCount FROM users WHERE id = ?", t)
+                helpfulCount = int(c.fetchone()[0])
+                helpfulCount += 1
+                # Rewrite helpfulCount to commenter
+                t = [helpfulCount, commenterId]
+                c.execute("UPDATE users SET helpfulCount=? WHERE id=?", (t[0], t[1]))
+                conn.commit()
                 
 
             # Deduce points from comment owner if this user evaluated him as Not Helpful
@@ -444,6 +492,21 @@ class Player(Thread):
                     t = [str(newLevel)]
                     c.execute("UPDATE users SET level=?", t)
                     conn.commit()
+                    # Increase helpfulCount of commenter
+                    # Get commenter ID
+                    t = [request['COMMENT_ID'], request['POST_ID']]
+                    c.execute("SELECT userid FROM comments WHERE id=? AND postid =?", (t[0], t[1]))
+                    commenterId = c.fetchone()[0]
+                    # Get commenter helpfulCount
+                    t = [commenterId]
+                    c.execute("SELECT helpfulCount FROM users WHERE id = ?", t)
+                    helpfulCount = int(c.fetchone()[0])
+                    helpfulCount -= 1
+                    # Rewrite helpfulCount to commenter
+                    t = [helpfulCount, commenterId]
+                    c.execute("UPDATE users SET helpfulCount=? WHERE id=?", (t[0], t[1]))
+                    conn.commit()
+                
 
             conn.close()
 
