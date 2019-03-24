@@ -216,6 +216,15 @@ class Player(Thread):
 
                 for key, value in request.items():
                     print ("Key is: ", key, ", Value is: ", value)
+
+                #Calculate comments on post
+
+                #Step 1: Get Post ID
+                postId = [str(post[0])]
+                #Step 2: Get the count of comments where postid is postId
+                c.execute("SELECT COUNT(*) FROM comments WHERE postid=?", postId)
+                commentsCount = c.fetchone()[0]
+
                 #Check if post has filters and apply them
 
                 #MY_QUESTIONS filter
@@ -252,11 +261,11 @@ class Player(Thread):
                     expiredState = "YES"
                     print("This question is expired! but MyQuestionsCheck is ", MyQuestionsCheck)
                     if MyQuestionsCheck == "YES":
-                        self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser, "EXPIRED": expiredState})
+                        self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser, "COMMENTS_COUNT": str(commentsCount), "EXPIRED": expiredState})
                     continue
 
 
-                self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser})
+                self.send_data({"TYPE": "POST_INFO", "POST_ID": str(post[0]), "USER_ID": post[1], "DATE": post[2], "POINTS": str(post[3]), "CONTENT": post[4], 'LIKED': likedByCurrentUser, "COMMENTS_COUNT": str(commentsCount)})
 
             conn.close()
 
