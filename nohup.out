@@ -1,0 +1,982 @@
+Server started on main thread
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    client_socket, client_address = SERVER.accept()
+  File "/usr/lib/python3.6/socket.py", line 205, in accept
+    fd, addr = self._accept()
+KeyboardInterrupt
+Server started on main thread
+New IP: 41.234.22.169
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(7,), (1,)] , Gonna try to find index of  (7,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850097 , With  2019-03-23 04:53:05.206818
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850326 , With  2019-03-23 04:53:03.929877
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850444 , With  2019-03-23 04:53:02.490770
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850553 , With  2019-03-23 04:53:00.473962
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850676 , With  2019-03-23 04:52:59.192377
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850780 , With  2019-03-23 04:52:57.921103
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850882 , With  2019-03-23 04:52:56.492839
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.850985 , With  2019-03-23 04:52:54.964557
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.851087 , With  2019-03-23 04:52:53.009919
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  7
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 02:57:49.851207 , With  2019-03-23 04:51:45.622133
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    client_socket, client_address = SERVER.accept()
+  File "/usr/lib/python3.6/socket.py", line 205, in accept
+    fd, addr = self._accept()
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/usr/lib/python3.6/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 1294, in _shutdown
+    t.join()
+  File "/usr/lib/python3.6/threading.py", line 1056, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.6/threading.py", line 1072, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Server started on main thread
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    client_socket, client_address = SERVER.accept()
+  File "/usr/lib/python3.6/socket.py", line 205, in accept
+    fd, addr = self._accept()
+KeyboardInterrupt
+Server started on main thread
+New IP: 41.234.22.169
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+User Not found in database. adding user e23aa076bcff68294f2a0b1483cd2f2a to database
+about to add this:  [0, 'e23aa076bcff68294f2a0b1483cd2f2a', 'DUMMYNAME', '100', '1', '0', '0', '0', '0']
+Got SEND_POST_REQUEST. About to connect to database file.
+Connected to database file.
+Trying to convert  10  into an int like :  10
+new level should be  ['1']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 03:03:07.705449 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  []
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 03:03:25.999317 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 03:03:27.105479 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+Going to compare posterid  0  with PLAYER_ID  0
+About to compare  2019-03-23 03:03:29.649753 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 03:03:33.668201 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  LIFESTYLE
+Going to compare QuestionGenre  LIFESTYLE  with genre  GENERAL
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  TECHNOLOGY
+Going to compare QuestionGenre  TECHNOLOGY  with genre  GENERAL
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 03:03:45.098053 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+CLIENT ID:0 HAS DISCONNECTED
+New IP: 41.234.22.169
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 03:03:59.185227 , With  2019-03-30 03:03:07.573895
+CLIENT ID:1 HAS DISCONNECTED
+New IP: 91.73.113.154
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+User Not found in database. adding user b5a7e5c758d2afdf883d5c29dc51f589 to database
+about to add this:  [1, 'b5a7e5c758d2afdf883d5c29dc51f589', 'DUMMYNAME', '100', '1', '0', '0', '0', '0']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:03:47.391368 , With  2019-03-30 03:03:07.573895
+Removing like
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569'), (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569') , but cmnt[0] is:  1
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '1', 'USER_ID': '1', 'CONTENT': 'for test only', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:04:27.010569', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+evaluators are:  [('1',)]
+user 1  EVALUATED that comment
+User evaluation on this comment is:  UNSURE
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'UNSURE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '1', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+New IP: 91.73.113.154
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:07:34.164088 , With  2019-03-30 03:03:07.573895
+Got SEND_POST_REQUEST. About to connect to database file.
+Connected to database file.
+Trying to convert  4  into an int like :  4
+new level should be  ['1']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:08:28.584214 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:08:28.584446 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Removing like
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  LIFESTYLE
+Going to compare posterid  1  with PLAYER_ID  1
+Going to compare QuestionGenre  LIFESTYLE  with genre  GENERAL
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  LIFESTYLE
+Going to compare posterid  0  with PLAYER_ID  1
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare posterid  1  with PLAYER_ID  1
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:40.077714 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare posterid  0  with PLAYER_ID  1
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:48.953714 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:48.953964 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:52.775709 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:52.775957 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare posterid  1  with PLAYER_ID  1
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:55.835676 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  YES
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare posterid  0  with PLAYER_ID  1
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:59.755828 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  GENERAL
+Going to compare QuestionGenre  GENERAL  with genre  GENERAL
+About to compare  2019-03-23 05:09:59.756063 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Removing like
+Removing like
+Removing like
+t is:  ['1']  because request POST_ID is:  1
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  [(2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334')]
+cmnt is:  (2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334') , but cmnt[0] is:  2
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '2', 'USER_ID': '1', 'CONTENT': 'thanks', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:10:46.881334', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  [(2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334')]
+cmnt is:  (2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334') , but cmnt[0] is:  2
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '2', 'USER_ID': '1', 'CONTENT': 'thanks', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:10:46.881334', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  [(2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334')]
+cmnt is:  (2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334') , but cmnt[0] is:  2
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '2', 'USER_ID': '1', 'CONTENT': 'thanks', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:10:46.881334', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569'), (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569') , but cmnt[0] is:  1
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '1', 'USER_ID': '1', 'CONTENT': 'for test only', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:04:27.010569', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+evaluators are:  [('1',)]
+user 1  EVALUATED that comment
+User evaluation on this comment is:  NOT_HELPFUL
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NOT_HELPFUL', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '1', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+New IP: 91.73.113.154
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(0,), (1,)] , Gonna try to find index of  (1,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:15:59.723712 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:15:59.723883 , With  2019-03-30 03:03:07.573895
+Got SEND_POST_REQUEST. About to connect to database file.
+Connected to database file.
+Trying to convert  5  into an int like :  5
+new level should be  ['1']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:17:17.755869 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:17:17.756074 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-23 05:17:17.756207 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  []
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569'), (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569') , but cmnt[0] is:  1
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '1', 'USER_ID': '1', 'CONTENT': 'for test only', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:04:27.010569', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+evaluators are:  [('1',)]
+user 1  EVALUATED that comment
+User evaluation on this comment is:  HELPFUL
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'HELPFUL', 'HELPFUL_EVALUATIONS': '1', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['1']  because request POST_ID is:  1
+comments is:  [(2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334')]
+cmnt is:  (2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334') , but cmnt[0] is:  2
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '2', 'USER_ID': '1', 'CONTENT': 'thanks', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:10:46.881334', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569'), (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569') , but cmnt[0] is:  1
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '1', 'USER_ID': '1', 'CONTENT': 'for test only', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:04:27.010569', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')Server started on main thread
+New IP: 41.46.219.9
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  2
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 01:24:29.160149 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 01:24:29.160385 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  0
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 01:24:29.160543 , With  2019-03-30 03:03:07.573895
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'YES'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  2
+t is:  ['0']  because request POST_ID is:  0
+comments is:  [(1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569'), (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029')]
+cmnt is:  (1, '1', 'for test only', 0, '2019-03-23 05:04:27.010569') , but cmnt[0] is:  1
+commenters are:  [('1',)]
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '1', 'USER_ID': '1', 'CONTENT': 'for test only', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:04:27.010569', 'CAN_EVALUATE': 'YES'}
+cmnt is:  (0, '0', 'First comment on final version', 0, '2019-03-23 03:03:17.837029') , but cmnt[0] is:  0
+commenters are:  [('0',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  [('1',)]
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '0', 'USER_ID': '0', 'CONTENT': 'First comment on final version', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '1', 'DATE': '2019-03-23 03:03:17.837029', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  2
+t is:  ['1']  because request POST_ID is:  1
+comments is:  [(2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334')]
+cmnt is:  (2, '1', 'thanks', 1, '2019-03-23 05:10:46.881334') , but cmnt[0] is:  2
+commenters are:  [('1',)]
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '2', 'USER_ID': '1', 'CONTENT': 'thanks', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:10:46.881334', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  2
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+evaluators are:  []
+user 0  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'YES'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+evaluators are:  [('0',)]
+user 0  EVALUATED that comment
+User evaluation on this comment is:  HELPFUL
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'HELPFUL', 'HELPFUL_EVALUATIONS': '1', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'YES'}
+Got requestplayerinfo request from  e23aa076bcff68294f2a0b1483cd2f2a
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (0,)
+found index! Player rank is  2
+CLIENT ID:0 HAS DISCONNECTED
+New IP: 91.73.64.148
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:30:32.805744 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:30:32.805964 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:30:32.806140 , With  2019-03-30 03:03:07.573895
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  [('0',)]
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '1', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  [('0',)]
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '1', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+t is:  ['2']  because request POST_ID is:  2
+comments is:  [(4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870'), (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239')]
+cmnt is:  (4, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:18.043870') , but cmnt[0] is:  4
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  []
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '4', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '0', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:18.043870', 'CAN_EVALUATE': 'NO'}
+cmnt is:  (3, '1', 'you need to register in the online and then register yourself at the subject', 2, '2019-03-23 05:18:05.524239') , but cmnt[0] is:  3
+commenters are:  [('1',)]
+User owns this comment, thus he CAN'T evaluate it
+evaluators are:  [('0',)]
+user 1  DID NOT EVALUATE that comment
+About to send the following comment to user:  {'TYPE': 'COMMENT_INFO', 'COMMENT_ID': '3', 'USER_ID': '1', 'CONTENT': 'you need to register in the online and then register yourself at the subject', 'USER_EVALUATION': 'NONE', 'HELPFUL_EVALUATIONS': '1', 'UNSURE_EVALUATIONS': '0', 'NOT_HELPFUL_EVALUATIONS': '0', 'DATE': '2019-03-23 05:18:05.524239', 'CAN_EVALUATE': 'NO'}
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:25.572877 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:25.573174 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:25.573389 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:29.539527 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:29.539776 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:29.539924 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+Got SEND_POST_REQUEST. About to connect to database file.
+Connected to database file.
+Trying to convert  13  into an int like :  13
+new level should be  ['2']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:47.391248 , With  2019-03-31 04:32:47.212386
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:47.391492 , With  2019-03-30 05:17:17.536180
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:47.391632 , With  2019-03-30 05:08:28.372570
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:32:47.391780 , With  2019-03-30 03:03:07.573895
+Got requestplayerinfo request from  b5a7e5c758d2afdf883d5c29dc51f589
+Found user!
+[(1,), (0,)] , Gonna try to find index of  (1,)
+found index! Player rank is  1
+Got SEND_POST_REQUEST. About to connect to database file.
+Connected to database file.
+Trying to convert  14  into an int like :  14
+new level should be  ['2']
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:33:16.284384 , With  2019-03-31 04:33:16.064614
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE , Value is:  NONE
+About to compare  2019-03-24 04:33:16.284666 , With  2019-03-31 04:32:47.212386
+Key is:  TYPE , Value is:  GET_POSTS_REQUEST
+Key is:  PLAYER_ID , Value is:  1
+Key is:  MY_QUESTION , Value is:  NO
+Key is:  QUESTIONS_GENRE
